@@ -1,0 +1,175 @@
+[gd_scene load_steps=4 format=3 uid="uid://1xd2ivcaleuj"]
+
+[ext_resource type="PackedScene" uid="uid://t2xmmow582kc" path="res://fret.tscn" id="1_oajyv"]
+[ext_resource type="Script" path="res://fret_board.gd" id="1_th2te"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6joar"]
+line_spacing = 20.0
+font_size = 64
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="FretBoard" type="Node2D"]
+script = ExtResource("1_th2te")
+
+[node name="Bounds" type="Line2D" parent="."]
+points = PackedVector2Array(-490, 280, -490, -280, 490, -280, 490, 280, -490, 280, -490, 169, 490, 169, 490, 58, -490, 58, -490, -53, 490, -53, 490, -164, -490, -164, -490, -280, -272, -280, -272, 280, -74, 280, -74, -280, 114, -280, 114, 280, 302, 280, 302, -280)
+default_color = Color(0, 0, 0, 1)
+
+[node name="Nut" type="Line2D" parent="."]
+points = PackedVector2Array(-480, -285, -480, 285)
+width = 50.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -564.0
+offset_top = -322.0
+offset_right = -512.0
+offset_bottom = 326.0
+text = "E
+B
+G
+D
+A
+E"
+label_settings = SubResource("LabelSettings_6joar")
+horizontal_alignment = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -457.0
+offset_top = -279.0
+offset_right = 492.0
+offset_bottom = 284.0
+
+[node name="Strings" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -52.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="HEFrets" type="HBoxContainer" parent="Control/Strings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Fret1" parent="Control/Strings/HEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret2" parent="Control/Strings/HEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret3" parent="Control/Strings/HEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret4" parent="Control/Strings/HEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret5" parent="Control/Strings/HEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="BFrets" type="HBoxContainer" parent="Control/Strings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Fret1" parent="Control/Strings/BFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret2" parent="Control/Strings/BFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret3" parent="Control/Strings/BFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret4" parent="Control/Strings/BFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret5" parent="Control/Strings/BFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="DFrets" type="HBoxContainer" parent="Control/Strings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Fret1" parent="Control/Strings/DFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret2" parent="Control/Strings/DFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret3" parent="Control/Strings/DFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret4" parent="Control/Strings/DFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret5" parent="Control/Strings/DFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="GFrets" type="HBoxContainer" parent="Control/Strings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Fret1" parent="Control/Strings/GFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret2" parent="Control/Strings/GFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret3" parent="Control/Strings/GFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret4" parent="Control/Strings/GFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret5" parent="Control/Strings/GFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="AFrets" type="HBoxContainer" parent="Control/Strings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Fret1" parent="Control/Strings/AFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret2" parent="Control/Strings/AFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret3" parent="Control/Strings/AFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret4" parent="Control/Strings/AFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret5" parent="Control/Strings/AFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="LEFrets" type="HBoxContainer" parent="Control/Strings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Fret1" parent="Control/Strings/LEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret2" parent="Control/Strings/LEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret3" parent="Control/Strings/LEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret4" parent="Control/Strings/LEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
+
+[node name="Fret5" parent="Control/Strings/LEFrets" instance=ExtResource("1_oajyv")]
+layout_mode = 2
