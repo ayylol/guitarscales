@@ -21,7 +21,7 @@ points = PackedVector2Array(-480, -285, -480, 285)
 width = 50.0
 default_color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="StringNames" type="Label" parent="."]
 offset_left = -564.0
 offset_top = -322.0
 offset_right = -512.0
@@ -33,7 +33,7 @@ D
 A
 E"
 label_settings = SubResource("LabelSettings_6joar")
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -173,3 +173,16 @@ layout_mode = 2
 
 [node name="Fret5" parent="Control/Strings/LEFrets" instance=ExtResource("1_oajyv")]
 layout_mode = 2
+
+[node name="ModeLabel" type="Label" parent="."]
+offset_left = -293.0
+offset_top = -443.0
+offset_right = 291.0
+offset_bottom = -344.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 70
+text = "Ionian"
+horizontal_alignment = 1
+vertical_alignment = 1
